@@ -1,0 +1,28 @@
+<div class="section-home clearfix" id="main-banner">
+    <div class="home-banner">
+      <div class="center"><br>
+        <h2 class="center">Find anything no matter what you want.</h2><br>
+
+        <%= form_tag  method: :get do |f| %>
+          <div class="form-group has-feedback">
+            <%= text_field_tag :search, nil, placeholder: "What are you shopping for today?", class: " form-control" %>
+            <i class="fa fa-search fa-2x form-control-feedback"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="section">
+      <h3 class="section-header" style="text-align: center;">Shop by category</h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h3 class="section-header" style="text-align: center;">Stall of the day</h3>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="section">
+      <h3 class="section-header" style="text-align: center;">Shops worth visiting</h3>
+    </div>  </div>

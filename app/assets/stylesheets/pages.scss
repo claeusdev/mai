@@ -1,0 +1,86 @@
+$white: #FFFFFF;
+$dark: #7c7c7c;
+$light: #f4f4f4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+$claeusRed: #f61616;
+
+
+.col-md-4 {
+  padding: 0;
+}
+
+.section {
+  padding: 2rem auto !important;
+  width: 100%;
+  min-height: 400px;
+  margin: 2rem auto;
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .page-header {
+    h3{
+      padding-top: 1rem;
+    }
+  }
+  // .col-md-2,
+  // .col-md-8 {
+  //   padding-right: .1rem !important;
+  //   padding-left: .1rem !important;
+  // }
+  .col-md-2 {
+    height: 100%;
+    margin-bottom: .5rem;
+    img {
+      height: 80%;
+      width: 100%;
+    }
+  }
+  .col-md-10 {
+    padding: 2rem;
+  }
+
+}
+
+.section-home {
+  padding: 2rem auto !important;
+  width: 100%;
+  min-height: 400px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.section-part {
+  border: 1px solid $light;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.section-header {
+  background-color: $light;
+  border-bottom: 1px solid $dark;
+  padding: .5rem;
+  margin-top: .5rem;
+  a {
+    font-size: 1rem;
+  }
+}
+
+.overlap {
+  .col-md-4 {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,303 @@
+$white: #FFFFFF;
+$dark: #7c7c7c;
+$light: #f4f4f4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
+$claeusRed: #f61616;
+
+
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  a {
+    color: grey;
+  }
+}
+
+body {
+  background-color: #F3F3F3 !important;
+  padding-top: 40px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.clearfix:before{}
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+nav {
+  border-bottom: 1px solid $dark;
+	border-radius: 0 !important;
+	background-color: $white !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  padding: 1.6rem auto !important;
+	.navbar-brand {
+    font-weight: 600;
+  	font-size: 3rem;
+  	font-family: monospace;
+    margin-right: 4rem;
+    color: $claeusRed !important;
+		a {
+			color: #BD1E23;
+			font-weight: bold;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+  .navbar-right {
+    li {
+      a{
+        font-weight: bold;
+      }
+    }
+  }
+  .navbar-default,
+  .navbar {
+    width: 100% !important;
+    border-radius: 0 !important;
+    border-color: 0 !important;
+    border: 0 !important;
+  }
+
+}
+
+.panel {
+  h3 {
+    margin-top: .5rem;
+  }
+  text-align: center;
+}
+#main-banner {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-search {
+  .form-control,
+  .button-other {
+    border: 2px solid $light !important;
+  }
+  .form-control {
+    width: 500px !important;
+    padding: .6rem;
+    border-radius: 0;
+    padding-left: 1rem;
+  }
+  .button-other {
+    width: 120px !important;
+    border-radius: 0;
+  }
+
+}
+
+.form-control {
+  border-radius: 0 !important;
+  height: 4.5rem;
+}
+
+.thumbnail {
+  min-height: 100px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0 !important;
+  img {
+    width: 100%;
+    height: 75%;
+  }
+
+}
+
+.item-desc {
+  min-height: 10rem;
+}
+
+i{
+  line-height: 2rem;
+  padding-right: .5rem;
+  color: inherit;
+}
+.label {
+  padding: .5rem !important;
+}
+
+#thin-line {
+  padding: 2rem;
+  border-left: 1px solid $claeusRed;
+  margin-bottom: 2rem;
+}
+
+.sign-in {
+  max-width: 50%;
+  margin: 2rem auto;
+}
+
+.page-header {
+  text-align: center;
+  margin: 20px !important;
+}
+
+
+.round-image-50 {
+
+  img{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $light;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+.round-image-100{
+
+  img{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $light;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+.center {
+  max-width: 80%;
+  margin: 1rem auto;
+}
+
+textarea {
+  min-height: 200px !important;
+}
+.media {
+  border-bottom: 2px solid $light;
+}
+
+.home-banner {
+  max-width: 100%;
+  color: $light;
+  .form-control {
+    width: 100% !important;
+    margin: 0 auto;
+    padding: .6rem;
+    border-radius: 0;
+    padding-left: 1rem;
+    height: 70px;
+  }
+  i {
+    padding: 2rem;
+    margin-right: 2rem;
+  }
+}
+.edit {
+  padding: 1.5rem;
+}
+
+.caption {
+  height: 5rem;
+  padding: 0;
+  background-color: $light;
+  h3 {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+  }
+  p {
+    margin-bottom: .2rem;
+  }
+}
+
+/*****************************
+		FOOTER
+******************************/
+
+.bottom-section {
+  background-color: #303945;
+  min-height: 200px;
+  padding: 5%;
+  color: #8c9098;
+	margin-top: 2rem;
+  margin-bottom: 0;
+  a {
+      display: block;
+      font-size: 13px;
+      color: #FFFFFF;
+      font-weight: 500;
+  }
+  .foot-note {
+    margin: 3rem auto;
+    text-align: center;
+  }
+}
+
+.social-links {
+  li {
+    display: inline-block;
+    padding: 1rem;
+  }
+}
+/*****************************
+		BUTTONS
+******************************/
+
+.button-default {
+	padding: .7rem;
+	border: 1px solid white;
+	margin-right: 1rem;
+	margin-top: .5rem;
+	margin-bottom: .5rem;
+	background-color: $claeusRed;
+	color: #FFFFFF;
+}
+
+.button-cart, .button-other {
+	padding: 3px 6px;
+	width: 120px;;
+}
+
+.button-contact {
+	margin-top: .578rem;
+	border: 1.5px solid white;
+	background-color: #ff4444;
+	color: #FFFFFF;
+	padding: 1rem;
+	width: 245px;
+}
+
+.button-other {
+	border: 2px solid $claeusRed;
+	background-color: #FFFFFF;
+	color: $claeusRed;
+	padding: 1rem;
+
+}
+
+
+/*==================================
+      MEDIA QUERIES
+==================================*/
