@@ -84,3 +84,28 @@ $claeusRed: #f61616;
     background-color: $white;
   }
 }
+/*****************************
+		PAGES
+******************************/
+
+.banner-elements {
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 5%;
+  color: $white;
+}
+
+.make-center {
+  padding: 2rem;
+}
+.red-flag {
+  color: $white;
+  background-color: $claeusRed;
+}
+
+#sell-banner {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url('virtualstore.jpg')
+}
