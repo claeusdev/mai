@@ -200,7 +200,7 @@ DEPENDENCIES
   jquery-rails
   mail_form (~> 1.5, >= 1.5.1)
   paperclip!
-  pg
+  pg (~> 0.18.4)
   rails (= 4.2.6)
   rails_12factor
   rmagick (~> 2.15, >= 2.15.4)

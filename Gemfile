@@ -25,8 +25,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :development do
-  gem 'pg'
+group :production do
+  gem 'pg', '~> 0.18.4'
   gem 'rails_12factor'
 end
 
