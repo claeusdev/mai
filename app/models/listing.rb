@@ -4,5 +4,5 @@ class Listing < ActiveRecord::Base
 
   belongs_to :category
 
-  validates :name, :description, :price, :location, :category_id, presence: true
+  validates :name, :description, :price, :location, :category_id, :image, presence: true
 end
