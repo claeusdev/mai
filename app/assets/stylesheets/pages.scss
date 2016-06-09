@@ -1,3 +1,11 @@
+@mixin bg_img($url, $size, $position) {
+  background-image: url($url);
+  background-size: $size;
+  background-position: $position;
+
+}
+
+
 $white: #FFFFFF;
 $dark: #7c7c7c;
 $light: #f4f4f4;
@@ -108,4 +116,9 @@ $claeusRed: #f61616;
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),url('virtualstore.jpg')
+}
+
+.cat_card {
+  @include bg_img("chucks.png", 100%, 100px 100px);
+  height: 7rem;
 }

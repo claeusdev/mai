@@ -2,7 +2,7 @@
     <div class="home-banner">
       <div class="center"><br>
         <br>
-        <h2 class="center">Find anything no matter what you want.</h2><br>
+        <h1 class="center">Buy directly from Ghana's emerging brands.</h1><br>
 
         <%= form_tag  method: :get do |f| %>
           <div class="form-group has-feedback">
@@ -16,6 +16,17 @@
   <div class="container-fluid">
     <div class="section" id="overlap-top">
       <h3 class="section-header" style="text-align: center;">Shop by Department</h3>
+      <div class="row">
+        <% @categories.each do |category| %>
+          <div class="col-md-3">
+            <div class="thumbnail">
+            </div>
+            <div class="panel">
+              <%= link_to category.name, category %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="">

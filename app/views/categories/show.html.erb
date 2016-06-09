@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<br><div class="container-fluid">
+  <div class="section-home">
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+      <h2 class="section-header"><%= @category.name %></h2>
+
+
+    <hr>
+    <%= link_to 'Edit', edit_category_path(@category) %> |
+    <%= link_to 'Back', categories_path %>
+
+  </div>
+</div>

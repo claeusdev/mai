@@ -17,6 +17,11 @@
     <small>Add a name to your item. eg. iPhoe 7 32GB</small>
   </div>
   <div class="form-group">
+    <%= f.label :category %><br>
+    <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name), {}, class: "form-control" %>
+    <small>Select a category.</small>
+  </div>
+  <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description, class: "form-control" %>
     <small>Provide a very good description for your item. Remember good description attracts!</small>
@@ -31,8 +36,13 @@
     <%= f.text_field :location, class: "form-control" %>
     <small>Where are you selling this item from?</small>
   </div>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: "form-control" %>
+    <small>Where are you selling this item from?</small>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button-other" %>
   </div>
 <% end %>

@@ -1,4 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <%= image_tag @listing.image(:large) %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <span class="label label-success">
+          <%=  @listing.category.name %>
+        </span><br ><br>
+        <span class="label label-danger"><%= @listing.id %></span>
+        <h3><%= @listing.name %>  | <%= number_to_currency(@listing.price) %></h3>
+        <label>Description:</label>
+        <p  class= "well item-desc "><%= @listing.description%></p>
+        <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 1.5rem;"> <%= @listing.location %></i><br><br>
+        <br>
+        <button type="button" name="button" class="btn btn-primary">Contact Seller</button>
+        <button type="button" name="button" class="btn btn-primary">Buy Now</button>
+        <button type="button" name="button" class="btn btn-primary">Add to cart</button>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
-<%= link_to 'Back', listings_path %>
+
+        <% if (user_signed_in?) && (current_user == @listing.user) %>
+          <%= link_to "Edit", edit_item_path(@listing) %>
+          <%= link_to 'Back', listing_path %>
+          <%= link_to "Delete", @listing, method: :get, data: {confirm: "Are you sure?"} %>
+        <% end %>
+      </div>
+      <!-- <div class="col-md-2">
+        <div class="section-part">
+
+        </div>
+      </div> -->
+    <div class="col-md-12">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Galery</a></li>
+        <li role="presentation"><a href="#">Review</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
