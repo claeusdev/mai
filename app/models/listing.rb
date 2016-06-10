@@ -3,6 +3,6 @@ class Listing < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :category
-
+  belongs_to :user
   validates :name, :description, :price, :location, :category_id, :image, presence: true
 end

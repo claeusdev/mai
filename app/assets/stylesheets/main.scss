@@ -49,7 +49,7 @@ nav {
 	background-color: $white !important;
   margin-bottom: 0 !important;
   width: 100% !important;
-  padding: 1.6rem auto !important;
+  padding: 0 auto !important;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
 	.navbar-brand {
     font-weight: 600;
@@ -67,8 +67,12 @@ nav {
 	}
   .navbar-right {
     li {
+      display: inline-block !important;
+      list-style: none;
+      line-height: 40px;
       a{
         font-weight: bold;
+
       }
     }
   }
