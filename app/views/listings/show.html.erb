@@ -15,6 +15,7 @@
         <label>Description:</label>
         <p  class= "well item-desc "><%= @listing.description%></p>
         <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 1.5rem;"> <%= @listing.location %></i><br><br>
+        <p class="label label-default"><%= @listing.user.username %></p><br>
         <button type="button" name="button" class="btn btn-primary">Contact Seller</button>
         <button type="button" name="button" class="btn btn-primary">Buy Now</button>
         <button type="button" name="button" class="btn btn-primary">Add to cart</button>
@@ -22,8 +23,8 @@
 
         <% if (user_signed_in?) %>
           <%= link_to "Edit", edit_listing_path(@listing) %>
-          <%= link_to 'Back', listing_path %>
-          <%= link_to "Delete", @listing, method: :get, data: {confirm: "Are you sure?"} %>
+          <%= link_to 'Back', listings_path %>
+          <%= link_to "Delete", @listing, method: :delete, data: {confirm: "Are you sure?"} %>
         <% end %>
       </div>
       <!-- <div class="col-md-2">

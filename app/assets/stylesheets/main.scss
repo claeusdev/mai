@@ -236,7 +236,7 @@ textarea {
 .caption {
   height: 5rem;
   padding: 0;
-  background-color: $light;
+  background-color: $white;
   h3 {
     font-weight: bold;
     text-transform: capitalize;
@@ -281,6 +281,12 @@ textarea {
     display: inline-block;
     padding: 1rem;
   }
+}
+
+.amount {
+  color: $claeusRed;
+  font-weight: bold;
+  letter-spacing: .6px;
 }
 /*****************************
 		BUTTONS

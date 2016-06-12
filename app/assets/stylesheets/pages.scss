@@ -122,3 +122,11 @@ $claeusRed: #f61616;
   @include bg_img("chucks.png", 100%, 100px 100px);
   height: 7rem;
 }
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

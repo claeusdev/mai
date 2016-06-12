@@ -14,6 +14,7 @@ class ListingsController < ApplicationController
   def show
     @categories = Category.all
     @user = User.all
+    
   end
 
   # GET /listings/new
@@ -32,7 +33,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
-    @listing.user.name = current_user.name
+    @listing.user.username = current_user.username
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }

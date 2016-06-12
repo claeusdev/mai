@@ -7,9 +7,9 @@
         <div class="center">
           <span class="round-image-100"><%= image_tag(@user.image(:thumb)) %></span>
           <h6 style="font-weight: bold"><%= @user.email %></h6>
-          <%= link_to "Add a picture", edit_user_registration_path, class: "btn btn default" %>
+          
           <br>
-
+          <%= link_to "Add item", new_listing_path, class: "btn button-other"%>
           <% if (current_user != @user) %>
           <hr>
             <button type="button" name="button" class="btn button-default">Follow</button>
