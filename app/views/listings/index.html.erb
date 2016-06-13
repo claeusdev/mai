@@ -8,13 +8,13 @@
               <%= link_to image_tag(listing.image.url(:medium)), listing %>
               <div class="caption">
                 <h3><%= link_to listing.name, listing %></h3>
-                <p class="amount"><%= number_to_currency(listing.price) %></p>
-
+                <span class="left" style="text-transform: capitalize;"><%= listing.user.username %></span>
+                <span class="amount right"><%= number_to_currency(listing.price) %></span>
                 <br>
-                <% if (user_signed_in?) && (current_user == listing.user) %>
+                <!-- <% if (user_signed_in?) && (current_user == listing.user) %>
                   <%= link_to "Edit", edit_listing_path(listing), class: "fa fa-retweet"%>
                   <%= link_to "Delete", listing, class: "fa fa-trash-o", method: :get, data: {confirm: "Are you sure?"} %>
-                <% end %>
+                <% end %> -->
               </div>
             </div>
           </div>
