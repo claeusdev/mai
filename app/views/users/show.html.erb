@@ -7,7 +7,7 @@
         <div class="center">
           <span class="round-image-100"><%= image_tag(@user.image(:thumb)) %></span>
           <h6 style="font-weight: bold"><%= @user.email %></h6>
-          
+
           <br>
           <%= link_to "Add item", new_listing_path, class: "btn button-other"%>
           <% if (current_user != @user) %>
@@ -16,9 +16,12 @@
           <% end %>
 
           <hr>
-          <h3>Shops</h3>
-          display shops user has
-
+          <h3>Shop</h3>
+          <% if (user_signed_in?) && (current_user == @user) %>
+              <h3><%= link_to 'Start your store', new_store_path, class: "btn button-other" %></h3>
+          <% else %>
+          <h3><%= link_to 'Visit store', new_store_path, class: "btn button-other" %></h3>
+          <% end %>
         </div>
       </div>
       <div class="col-md-6 section-part">

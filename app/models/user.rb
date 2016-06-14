@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  has_many :stores
   has_many :listings, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
