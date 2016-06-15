@@ -15,13 +15,8 @@
             <button type="button" name="button" class="btn button-default">Follow</button>
           <% end %>
 
-          <hr>
-          <h3>Shop</h3>
-          <% if (user_signed_in?) && (current_user == @user) %>
-              <h3><%= link_to 'Start your store', new_store_path, class: "btn button-other" %></h3>
-          <% else %>
-          <h3><%= link_to 'Visit store', new_store_path, class: "btn button-other" %></h3>
-          <% end %>
+
+
         </div>
       </div>
       <div class="col-md-6 section-part">
@@ -33,11 +28,21 @@
           Phone:
         </p>
       </div>
-      <% if (user_signed_in?) && (current_user == @user) %>
+
         <div class="col-md-3 section-part">
           <h5>Got any great stuff to sell?</h5><hr>
+          <% if (user_signed_in?) && (current_user == @user) %>
+            <% if @user.stores.count == 0 %>
+              <h3><%= link_to 'Start your store', new_store_path, class: "btn button-other" %></h3>
+            <% else %>
+              <h4><%= @user.username %> has <%= @user.stores.count %> store(s)</h4>
+              <span><%= link_to 'Visit store', store_path, class: "btn button-other" %></span>
 
-      <% end %>
+            <% end %>
+          <% else %>
+            <h3><%= link_to 'Visit store', new_store_path, class: "btn button-other" %></h3>
+          <% end %>
+          <%= link_to "Manage listings", users_path %>
 
     </div>
   </div>

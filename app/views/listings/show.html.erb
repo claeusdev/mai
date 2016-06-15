@@ -1,6 +1,7 @@
 <div class="section">
   <div class="container">
     <div class="row">
+      <h3 class="page-header">Sold by <%= link_to @listing.user.username, user_path %></h3>
       <div class="col-md-4">
         <div class="thumbnail">
           <%= image_tag @listing.image(:large) %>
