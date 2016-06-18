@@ -15,8 +15,10 @@ Rails.application.routes.draw do
 
   get 'pages/sell'
 
+  get 'sales' => 'orders#sales'
+  get 'purchases' => 'orders#purchases'
   resources :listings do
-    resources:orders
+    resources:orders, only: (:new, :create)
   end
 
   root "pages#home"
