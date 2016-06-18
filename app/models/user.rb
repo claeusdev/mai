@@ -3,10 +3,15 @@ class User < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  has_many :stores
-  has_many :listings, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  has_many :stores
+  has_many :listings, dependent: :destroy
+
+  has_many :sales, class_name: 'Order', foreign_key: 'seller_id'
+  has_many :purchases, class_name: 'Order', foreign_key: 'buyer_id'
+
 end

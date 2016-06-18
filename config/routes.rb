@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :orders
   resources :stores
   resources :categories
   devise_for :users
@@ -14,7 +15,9 @@ Rails.application.routes.draw do
 
   get 'pages/sell'
 
-  resources :listings
+  resources :listings do
+    resources:orders
+  end
 
   root "pages#home"
 end

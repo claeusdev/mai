@@ -1,19 +1,49 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @store.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @store.description %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @store.location %>
-</p>
+<div class="store-banner">
+  <div class="container">
+    <div class="">
+      <div class="left">
+        <h3><%= @store.name %></h3>
+        <h4><%= @store.description %></h4>
+      <i class="fa fa-map-marker" aria-hidden="true"><%= @store.location %></i>
+        <h5><%= @store.created_at.strftime("Joined %d/%Y") %></h5>
+        <% if (user_signed_in?) && (current_user == @store.user) %>
+          <%= link_to 'Edit your shop', edit_store_path(@store), class: "btn button-default" %>
 
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+        <% else %>
+          <%= link_to 'Back', stores_path %>
+        <% end %>
+
+      </div>
+      <div class="right">
+        <h4>Owned by</h4>
+        <span class= "round-image-100"><%= image_tag(@store.user.image(:thumb)) %></span>
+        <h3>   <%= link_to @store.user.username , user_path %></h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-10 col-md-offset-1">
+      <h3 class="page-header">Shop Items</h3>
+      <% @store.user.listings.each do |listing| %>
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="thumbnail">
+              <%= link_to image_tag(listing.image.url(:medium)), listing %>
+              <div class="caption">
+                <h3><%= link_to listing.name, listing %></h3>
+                <span class="amount">GHS <%= listing.price %></span>
+
+              </div>
+            </div>
+          </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

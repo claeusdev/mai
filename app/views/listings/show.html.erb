@@ -16,13 +16,12 @@
         <label>Description:</label>
         <p  class= "well item-desc "><%= @listing.description%></p>
         <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 1.5rem;"> <%= @listing.location %></i><br><br>
-        <p class="label label-default"><%= @listing.user.username %></p><br>
         <button type="button" name="button" class="btn btn-primary">Contact Seller</button>
-        <button type="button" name="button" class="btn btn-primary">Buy Now</button>
+        <%= link_to "Buy Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
         <button type="button" name="button" class="btn btn-primary">Add to cart</button>
 
 
-        <% if (user_signed_in?) %>
+        <% if (user_signed_in?) && (current_user == @user) %>
           <%= link_to "Edit", edit_listing_path(@listing) %>
           <%= link_to 'Back', listings_path %>
           <%= link_to "Delete", @listing, method: :delete, data: {confirm: "Are you sure?"} %>
@@ -33,7 +32,9 @@
 
         </div>
       </div> -->
+
     <div class="col-md-12">
+      <br><br>
       <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="#">Gallery</a></li>
         <li role="presentation"><a href="#">Review</a></li>

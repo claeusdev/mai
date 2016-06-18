@@ -1,3 +1,32 @@
 // Place all the styles related to the stores controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.store-banner {
+  height: 200px;
+  background-color: $white;
+  h3 {
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  .right {
+    h3 {
+      margin-top: .5rem;
+    }
+  }
+}
+
+i {
+  font-family: raleway !important;
+  font-weight: bold;
+}
+
+.item {
+  padding: 1rem;
+  margin-left: 2rem;
+  li{
+    list-style: none;
+    font-size: 1.4rem;
+    display: block;
+  }
+}
