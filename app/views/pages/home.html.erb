@@ -4,7 +4,7 @@
         <br>
         <h1 class="center">Buy directly from Ghana's emerging brands.</h1><br>
 
-        <%= form_tag  method: :get do |f| %>
+        <%= form_tag search_listings_path,  method: :get do |f| %>
           <div class="form-group has-feedback">
             <%= text_field_tag :search, nil, placeholder: "What are you shopping for today?", class: " form-control" %>
             <i class="fa fa-search fa-2x form-control-feedback"></i>
@@ -33,7 +33,7 @@
   <div class="">
 
   </div>
-  <div class="">
+  <!-- <div class="">
     <div class="row">
       <div class="col-md-3">
 
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
   <div class="container-fluid">
     <div class="">
       <h3 class="section-header" style="text-align: center;">Latest items</h3>

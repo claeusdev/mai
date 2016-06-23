@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
 
   def sales
     @orders = Order.all.where(seller: current_user).order("created_at DESC")
+
   end
 
   def purchases

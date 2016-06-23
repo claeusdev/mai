@@ -1,5 +1,6 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /stores
   # GET /stores.json
@@ -10,6 +11,15 @@ class StoresController < ApplicationController
   # GET /stores/1
   # GET /stores/1.json
   def show
+  end
+
+  def search
+    @categories = Category.all
+    if params[:category].blank? && params[:search].blank?
+      @stores = Store.all.order(created_at: :desc).page(params[:page]).per(20)
+    else
+      @stores = Store.search(params)
+    end
   end
 
   # GET /stores/new

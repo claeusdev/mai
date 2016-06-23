@@ -14,7 +14,16 @@ class ListingsController < ApplicationController
   def show
     @categories = Category.all
     @user = User.all
-    
+
+  end
+
+  def search
+    @categories = Category.all
+    if params[:category].blank? && params[:search].blank?
+      @listings = Listing.all.order(created_at: :desc).page(params[:page]).per(20)
+    else
+      @listings = Listing.search(params)
+    end
   end
 
   # GET /listings/new
