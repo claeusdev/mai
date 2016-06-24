@@ -1,10 +1,40 @@
 
-<br><div class="section-home">
+<br><div class="">
   <div class="container-fluid">
     <p id="notice"><%= notice %></p>
 
-      <h2 class="section-header" style="text-align: center;"><%= @category.name %></h2>
+      <h2 class="page-header" style="text-align: center;"><%= @category.name %></h2>
+      <div class="row">
+        <div class="container">
+          <div class="col-md-3">
+            <div class="panel">
+              <!-- <h3 class="page-header">Categories</h3> -->
+              <ul class="cat-side">
+                <% @categories.subcategories.each do |subcategory| %>
+                  <li><%= link_to subcategory.name %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-3">
+                <% @categories.listings.each do |listing| %>
+                  <div class="thumbnail">
+                    <%= link_to image_tag(listing.image.url(:medium)), listing %>
+                    <div class="caption">
+                      <h3><%= link_to listing.name, listing %></h3>
+                      <span class="left" style="text-transform: uppercase;"><%= listing.user.username %></span>
+                      <span class="amount right"><%= number_to_currency(listing.price) %></span>
 
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <hr>
     <%= link_to 'Edit', edit_category_path(@category) %> |

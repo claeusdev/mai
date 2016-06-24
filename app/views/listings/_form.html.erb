@@ -14,7 +14,13 @@
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "form-control" %>
-    <small>Add a name to your item. eg. iPhoe 7 32GB</small>
+    <small>Add a name to your item. eg. iPhone 7 32GB</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control" %>
+    <small>Provide a very good description for your item. Remember good description attracts!</small>
   </div>
   <div class="form-group">
     <%= f.label :category %><br>
@@ -22,9 +28,9 @@
     <small>Select a category.</small>
   </div>
   <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
-    <small>Provide a very good description for your item. Remember good description attracts!</small>
+    <%= f.label :subcategory %><br>
+    <%= f.select :subcategory_id, options_from_collection_for_select(Subcategory.all, :id, :name), {}, class: "form-control" %>
+    <small>Select a category.</small>
   </div>
   <div class="form-group">
     <%= f.label :price %><br>
