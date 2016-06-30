@@ -20,15 +20,31 @@ Subcategory.where(name: "Phones & Accesories", category_id: electronics_category
 Subcategory.where(name: "Cameras & Photo", category_id: electronics_category.id).first_or_create(name: "Cameras & Photo", category_id: electronics_category.id)
 Subcategory.where(name: "Computers & Tablets", category_id: electronics_category.id).first_or_create(name: "Computers & Tablets", category_id: electronics_category.id)
 Subcategory.where(name: "TV & Video", category_id: electronics_category.id).first_or_create(name: "TV & Video", category_id: electronics_category.id)
-Subcategory.where(name: "Games & Console", category_id: electronics_category.id).first_or_create(name: "Games & Console", category_id: electronics_category.id)
+Subcategory.where(name: "Musical Instruments", category_id: electronics_category.id).first_or_create(name: "Musical Instruments", category_id: electronics_category.id)
+Subcategory.where(name: "Wearables", category_id: electronics_category.id).first_or_create(name: "Wearables", category_id: electronics_category.id)
+Subcategory.where(name: "Monitors", category_id: electronics_category.id).first_or_create(name: "Monitors", category_id: electronics_category.id)
+Subcategory.where(name: "Drives & Storage", category_id: electronics_category.id).first_or_create(name: "Drives & Storage", category_id: electronics_category.id)
+Subcategory.where(name: "Printers & Ink", category_id: electronics_category.id).first_or_create(name: "Printers & Ink", category_id: electronics_category.id)
+Subcategory.where(name: "Car Electronics", category_id: electronics_category.id).first_or_create(name: "Car Electronics", category_id: electronics_category.id)
+Subcategory.where(name: "Home, Audio & Theather", category_id: electronics_category.id).first_or_create(name: "Home, Audio & Theather", category_id: electronics_category.id)
+
 
 Subcategory.where(name: "Clothing", category_id: men_category.id).first_or_create(name: "Clothing", category_id: men_category.id)
 Subcategory.where(name: "Shoes", category_id: men_category.id).first_or_create(name: "Shoes", category_id: men_category.id)
 Subcategory.where(name: "Accesories", category_id: men_category.id).first_or_create(name: "Accesories", category_id: men_category.id)
+Subcategory.where(name: "Bags & Wallets", category_id: men_category.id).first_or_create(name: "Bags & Wallets", category_id: men_category.id)
+Subcategory.where(name: "Jewelry", category_id: men_category.id).first_or_create(name: "Jewelry", category_id: men_category.id)
+Subcategory.where(name: "Watches", category_id: men_category.id).first_or_create(name: "Watches", category_id: men_category.id)
+Subcategory.where(name: "Gifts", category_id: men_category.id).first_or_create(name: "Gifts", category_id: men_category.id)
+
 
 Subcategory.where(name: "Clothing", category_id: women_category.id).first_or_create(name: "Clothing", category_id: women_category.id)
 Subcategory.where(name: "Shoes", category_id: women_category.id).first_or_create(name: "Shoes", category_id: women_category.id)
 Subcategory.where(name: "Accesories", category_id: women_category.id).first_or_create(name: "Accesories", category_id: women_category.id)
+Subcategory.where(name: "Jewelry", category_id: women_category.id).first_or_create(name: "Jewelry", category_id: women_category.id)
+Subcategory.where(name: "Watches", category_id: women_category.id).first_or_create(name: "Watches", category_id: women_category.id)
+Subcategory.where(name: "Gifts", category_id: women_category.id).first_or_create(name: "Gifts", category_id: women_category.id)
+
 
 Subcategory.where(name: "Clothing", category_id: baby_category.id).first_or_create(name: "Clothing", category_id: baby_category.id)
 Subcategory.where(name: "Shoes", category_id: baby_category.id).first_or_create(name: "Shoes", category_id: baby_category.id)

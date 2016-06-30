@@ -13,9 +13,22 @@
           <hr>
             <button type="button" name="button" class="btn button-default">Follow</button>
           <% end %>
+          <hr>
+          <p>
+            Admirers
+          </p>
+          <p>
+            Admiring
+          </p>
+          <p>
+            Favorites
+          </p>
         </div>
       </div>
-      <div class="col-md-6 section-part">
+      <div class="col-md-6">
+        <h4 class="page-header">About <%= @user.username %></h4>
+
+        <p>Joined on <%= @user.created_at.strftime("Joined %B-%d-%Y") %></p>
         <h4>Shipping Information</h4>
         <p>
           Address:
@@ -23,10 +36,15 @@
         <p>
           Phone:
         </p>
+
+        <h4 class="page-header">Messaging</h4>
       </div>
 
-      <div class="col-md-3 section-part">
+      <div class="col-md-3">
         <h5>Got any great stuff to sell?</h5><hr>
+        <p>
+          Display shop logo here!!!
+        </p>
         <% if (user_signed_in?) && (current_user == @user) %>
           <% if @user.stores.count == 0 %>
             <h3><%= link_to 'Start your store', new_store_path, class: "btn button-other" %></h3>
@@ -36,10 +54,10 @@
 
           <% end %>
         <% else %>
-          <h3><%= link_to 'Visit store', new_store_path, class: "btn button-other" %></h3>
+          <h3><%= link_to 'Visit store', store_path, class: "btn button-other" %></h3>
         <% end %>
-        <%= link_to "Manage listings", users_path %>
+
+      </div>
     </div>
   </div>
-</div>
 </section>
