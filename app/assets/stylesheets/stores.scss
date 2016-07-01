@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .store-banner {
-  height: 200px;
+  min-height: 200px;
   background-color: $white;
   h3 {
     text-transform: capitalize;

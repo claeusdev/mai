@@ -2,7 +2,12 @@
 <section class="section-home">
   <div class="container">
     <div class="row">
-      <h4 class="page-header">Welcome back, <%= @user.username %>!</h4>
+      <% if (current_user == @user) %>
+        <h4 class="page-header">Welcome back, <%= @user.username %>!</h4>
+      <% else %>
+      <h4 class="page-header">Welcome to <%= @user.username %>'s profile</h4>
+
+      <% end %>
       <div class="col-md-3">
         <div class="">
           <span class="round-image-100"><%= image_tag(@user.image(:thumb)) %></span>
@@ -37,7 +42,9 @@
           Phone:
         </p>
 
-        <h4 class="page-header">Messaging</h4>
+        <h4 class="page-header">Followers</h4>
+
+        <h4 class="page-header">Items <%= @user.username %> likes.</h4>
       </div>
 
       <div class="col-md-3">

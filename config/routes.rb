@@ -2,6 +2,17 @@ Rails.application.routes.draw do
 
 
 
+  namespace :admin do
+    resources :users
+resources :categories
+resources :listings
+resources :orders
+resources :stores
+resources :subcategories
+
+    root to: "users#index"
+  end
+
   resources :orders
   resources :stores
   

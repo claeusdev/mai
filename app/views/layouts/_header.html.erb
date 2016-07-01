@@ -25,7 +25,6 @@
           <li> <%= link_to "Open a shop", pages_sell_path %></li>
           <li><%= link_to new_user_session_path do %>Favorites<% end %></li>
           <% if current_user.stores.count >= 1 %>
-
             <li><%= link_to "Enter Store", store_path(current_user) %> </li>
           <% end %>
 

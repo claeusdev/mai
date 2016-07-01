@@ -1,6 +1,13 @@
-<h1>Editing Store</h1>
 
-<%= render 'form' %>
+<div class="section-home"><br>
+  <div class="container">
+    <h3 class="page-header">Edit store details.</h3>
+    <div class="col-md-8 col-md-offset-2">
+      <%= render 'form' %>
+      <hr>
+      <%= link_to 'Show', @store %> |
+      <%= link_to 'Back', stores_path %><br><br>
+    </div>
+  </div>
 
-<%= link_to 'Show', @store %> |
-<%= link_to 'Back', stores_path %>
+</div>
