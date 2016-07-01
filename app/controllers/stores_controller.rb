@@ -11,7 +11,6 @@ class StoresController < ApplicationController
   # GET /stores/1
   # GET /stores/1.json
   def show
-    @stores = Store.find(params[:id])
   end
 
   def search
