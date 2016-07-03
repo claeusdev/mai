@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -79,4 +80,18 @@ Rails.application.configure do
 
   config.serve_static_assets = true
   config.assets.compile = true
+
+
+
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+   :address              => "smtp.gmail.com",
+   :port                 => 587,
+   :user_name            => ENV['gmail_username'],
+   :password             => ENV['gmail_password'],
+   :authentication       => "plain",
+  :enable_starttls_auto => true
+  }
+  config.action_mailer.default_url_options = { :host => 'quiet-refuge-15852.heroku.com' }
 end
