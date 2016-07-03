@@ -7,12 +7,13 @@
           <%= image_tag @listing.image(:large) %>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6"><br>
         <span class="label label-success">
           <%=  @listing.category.name %>
         </span><br ><br>
         <span class="label label-danger"><%= @listing.id %></span>
-        <h3><%= @listing.name %>  | <%= number_to_currency(@listing.price) %></h3>
+        <h3><%= @listing.name %></h3>
+        <h4> <%= number_to_currency(@listing.price) %></h4>
         <label>Description:</label>
         <p  class= "well item-desc "><%= @listing.description%></p>
         <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 1.5rem;"> <%= @listing.location %></i><br><br>
