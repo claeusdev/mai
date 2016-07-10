@@ -1,15 +1,17 @@
-<div class="section-home clearfix" id="main-banner">
+<br>
+<br>
+<div class="section-home" id="main-banner">
     <div class="home-banner">
       <div class="center"><br>
         <br>
         <h1 class="center">Buy directly from Ghana's emerging brands.</h1><br>
 
-        <%= form_tag search_listings_path,  method: :get do |f| %>
+        <!-- <%= form_tag search_listings_path,  method: :get do |f| %>
           <div class="form-group has-feedback">
             <%= text_field_tag :search, nil, placeholder: "What are you shopping for today?", class: " form-control" %>
             <i class="fa fa-search fa-2x form-control-feedback"></i>
           </div>
-        <% end %>
+        <% end %> -->
       </div>
     </div>
   </div>
@@ -18,7 +20,7 @@
       <h3 class="section-header" style="text-align: center;">Shop by Department</h3>
       <div class="row">
         <% @categories.each do |category| %>
-          <div class="col-md-2">
+          <div class="col-md-3">
             <div class="thumbnail">
               <%= link_to image_tag(category.image(:medium)), category %>
             </div>
@@ -49,7 +51,7 @@
     </div>
 
   </div> -->
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
     <div class="">
       <h3 class="section-header" style="text-align: center;">Latest items</h3>
       <div class="row">
@@ -67,4 +69,5 @@
           </div>
         <% end %>
       </div>
-    </div>  </div>
+    </div>
+  </div> -->

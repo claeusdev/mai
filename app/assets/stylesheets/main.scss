@@ -11,12 +11,11 @@ $claeusRed: #f61616;
   background-position: $position;
 
 }
-.navbar-form {
-  .form-control {
-    width: 400px;
-    height: 3rem;
-  }
-}
+
+/*************************
+      MAIN STYLES
+**************************/
+
 * {
   font-family: raleway;
   margin: 0;
@@ -30,7 +29,6 @@ $claeusRed: #f61616;
 
 body {
   background-color: #F3F3F3 !important;
-  padding-top: 40px;
 }
 
 .container {
@@ -47,6 +45,17 @@ body {
 
 .clearfix:after {
 	clear: both;
+}
+
+/*************************
+      NAVIGATION
+**************************/
+
+.navbar-form {
+  .form-control {
+    width: 400px;
+    height: 3rem;
+  }
 }
 
 nav {
@@ -88,6 +97,31 @@ nav {
 
 }
 
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.top-nav {
+  background-color: $claeusRed;
+  height: 3rem;
+  ul {
+    margin-bottom: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: .6rem;
+      a{
+        padding-right: 1rem;
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+
 .panel {
   padding-left: 1.5rem;
 }
@@ -108,6 +142,10 @@ nav {
   height: 4rem;
 }
 
+/*************************
+      IMAGES
+**************************/
+
 .thumbnail {
   min-height: 100px;
   width: 100%;
@@ -127,6 +165,38 @@ nav {
 
 }
 
+.round-image-50 {
+
+  img{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $light;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+.round-image-100{
+
+  img{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid $light;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+
+/*************************
+      ITEMS/LISTINGS
+**************************/
 .item-desc {
   min-height: 10rem;
 }
@@ -157,33 +227,7 @@ i{
 }
 
 
-.round-image-50 {
 
-  img{
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid $light;
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    overflow: hidden;
-    text-align: center;
-  }
-}
-
-.round-image-100{
-
-  img{
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid $light;
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    overflow: hidden;
-    text-align: center;
-  }
-}
 
 .center {
   max-width: 80%;
@@ -261,7 +305,11 @@ textarea {
   }
 }
 
-
+.col-md-3 {
+  img {
+    width: 100%;
+  }
+}
 
 
 /*****************************
