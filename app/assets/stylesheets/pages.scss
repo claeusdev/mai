@@ -11,7 +11,7 @@ $light: #f4f4f4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
 $claeusRed: #f61616;
-
+$caption: #e0dede;
 
 .col-md-4 {
   padding: 0;
@@ -94,6 +94,7 @@ $claeusRed: #f61616;
     background-color: $white;
   }
 }
+
 /*****************************
 		PAGES
 ******************************/
@@ -138,4 +139,43 @@ $claeusRed: #f61616;
     font-size: 1.5rem;
     font-weight: bold;
   }
+}
+
+/********************
+  SELL PAGE
+*********************/
+
+.color {
+  background-color: lightblue;
+}
+
+
+/********************
+  HOME PAGE
+*********************/
+.home-cat {
+  .col-md-3 {
+    margin: .5rem 0;
+    padding: .3rem;
+    .thumbnail {
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+      .caption {
+        border-top: .3px solid $light;
+        background-color: $caption;
+        h3 {
+          padding-top: .5rem;
+          margin-top: 0;
+          a {
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+        }
+        .cat-name {
+          text-align: center;
+        }
+      }
+    }
+
+  }
+
 }

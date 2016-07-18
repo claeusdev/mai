@@ -28,12 +28,15 @@
           <p>
             Favorites
           </p>
+          <p>
+            Purchases
+          </p>
         </div>
       </div>
       <div class="col-md-6">
         <h4 class="page-header">About <%= @user.username %></h4>
 
-        <p>Joined on <%= @user.created_at.strftime("Joined %B-%d-%Y") %></p>
+        <p><%= @user.created_at.strftime("Joined %B-%d-%Y") %></p>
         <h4>Shipping Information</h4>
         <p>
           Address:

@@ -11,15 +11,11 @@
 
   <tbody>
     <% @subcategories.each do |subcategory| %>
-      <tr>
-        <td><%= link_to 'Show', subcategory %></td>
-        <td><%= link_to 'Edit', edit_subcategory_path(subcategory) %></td>
-        <td><%= link_to 'Destroy', subcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Subcategory', new_subcategory_path %>
+<%= link_to 'New Subcategory', new_category_subcategory_path %>
