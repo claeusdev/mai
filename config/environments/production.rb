@@ -82,7 +82,7 @@ Rails.application.configure do
   config.assets.compile = true
 
 
-  config.action_mailer.default_url_options = { host: 'https://quiet-refuge-15852.heroku.com' }
+  config.action_mailer.default_url_options = { host: 'https://www.claeus.com' }
    config.action_mailer.delivery_method = :smtp
 
    ActionMailer::Base.smtp_settings = {
