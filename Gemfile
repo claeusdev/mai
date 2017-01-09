@@ -19,6 +19,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'simple_form'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
