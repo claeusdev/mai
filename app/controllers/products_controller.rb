@@ -20,9 +20,9 @@ class ProductsController < ApplicationController
   def search
     @categories = Category.all
     if params[:category].blank? && params[:search].blank?
-      @product = Product.all.order(created_at: :desc).page(params[:page]).per(20)
+      @products = Product.all.order(created_at: :desc).page(params[:page]).per(20)
     else
-      @product = Product.search(params)
+      @products = Product.search(params)
     end
   end
 
