@@ -13,7 +13,7 @@
           <span class="round-image-100"><%= image_tag(@user.image(:thumb)) %></span>
           <h4 style="font-weight: bold"><%= @user.first_name %> <%= @user.last_name %></h4>
           <br>
-          <%= link_to "Add item", new_listing_path, class: "btn button-other"%>
+          <%= link_to "Add item", new_product_path, class: "btn button-other"%>
           <% if (current_user != @user) %>
           <hr>
             <button type="button" name="button" class="btn button-default">Follow</button>
@@ -56,10 +56,10 @@
           Display shop logo here!!!
         </p>
         <% if (user_signed_in?) && (current_user == @user) %>
-          <% if @user.stores.count == 0 %>
+          <% if !@user.store %>
             <h3><%= link_to 'Start your store', new_store_path, class: "btn button-other" %></h3>
           <% else %>
-            <h4><%= @user.username %> has <%= @user.stores.count %> store(s)</h4>
+            <h4><%= @user.username %> has <%= @user.store %></h4>
             <span><%= link_to 'Visit store', store_path, class: "btn button-other" %></span>
 
           <% end %>

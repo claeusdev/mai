@@ -8,10 +8,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many :stores
-  has_many :listings, dependent: :destroy
-
-  has_many :sales, class_name: 'Order', foreign_key: 'seller_id'
-  has_many :purchases, class_name: 'Order', foreign_key: 'buyer_id'
-
+  has_one :store
 end

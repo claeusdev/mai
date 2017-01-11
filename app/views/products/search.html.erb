@@ -1,0 +1,47 @@
+<div class="section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <h3 class="sub-heading">Advanced Search</h3>
+        <%= form_tag search_products_path, method: :get do  |f| %>
+          <div class="form-group">
+            <label>Search</label>
+            <%= text_field_tag :search, nil, placeholder: "iPhone, Nike, etc.", class: "form-control"%>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <%= select_tag :category, options_from_collection_for_select(Category.all, :id, :name), class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <%= text_field_tag :location, nil, placeholder: "Accra, Kumasi, etc.", class: "form-control"%>
+          </div>
+          <%= submit_tag "Search", class: "button-other" %>
+        <% end %>
+      </div>
+      <div class="col-md-10">
+        <h3 class="page-header">Search results</h3>
+
+
+          <% @products.each do |product| %>
+          <div class="media">
+            <div class="media-left">
+              <%= link_to image_tag(product.image.url(:thumb)), product %>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%= link_to product.name, product %></h4><br>
+              <p><%= product.description%></p>
+              <p><%= number_to_currency(product.price) %>  |  <span class="label label-success"><%= product.category.name %> </span> <span class="right">Sold by <%= link_to product.store.name %></span> </p>
+            </div>
+
+            <br>
+          </div>
+          <% end %>
+
+
+          <br>
+      </div>
+    </div>
+  </div>
+
+</div>

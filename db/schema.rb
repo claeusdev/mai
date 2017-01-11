@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20160710010648) do
     t.datetime "image_updated_at"
   end
 
-  create_table "listings", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.decimal  "price"
@@ -30,25 +30,14 @@ ActiveRecord::Schema.define(version: 20160710010648) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "category_id"
+    t.integer  "store_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
-    t.integer  "subcategory_id"
-    t.integer  "store_id"
-    t.index ["category_id"], name: "index_listings_on_category_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string   "address"
-    t.string   "city"
-    t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "listing_id"
-    t.integer  "buyer_id"
-    t.integer  "seller_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["store_id"], name: "index_products_on_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -63,13 +52,6 @@ ActiveRecord::Schema.define(version: 20160710010648) do
     t.datetime "image_updated_at"
     t.integer  "user_id"
     t.string   "phone_number"
-  end
-
-  create_table "subcategories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,9 +78,6 @@ ActiveRecord::Schema.define(version: 20160710010648) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "gender"
-    t.text     "about"
-    t.string   "city"
-    t.string   "country"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
