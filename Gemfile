@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
 gem 'bootstrap-sass', '~> 3.4'
-gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'devise', '~> 4.7'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'simple_form'
